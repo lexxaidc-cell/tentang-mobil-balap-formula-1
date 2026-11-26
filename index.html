@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 Guide &amp; 2026 Season Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:ital,wght@0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0c10;
+            color: #e5e7eb;
+        }
+        h1, h2, h3, .font-f1 {
+            font-family: 'Titillium Web', sans-serif;
+        }
+        .f1-stripe {
+            background: repeating-linear-gradient(
+                -45deg,
+                #e10600,
+                #e10600 10px,
+                #15151e 10px,
+                #15151e 20px
+            );
+        }
+        .checkered-flag {
+            background-color: #ffffff;
+            background-image: linear-gradient(45deg, #111827 25%, transparent 25%),
+                              linear-gradient(-45deg, #111827 25%, transparent 25%),
+                              linear-gradient(45deg, transparent 75%, #111827 75%),
+                              linear-gradient(-45deg, transparent 75%, #111827 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+        .yellow-red-flag {
+            background: repeating-linear-gradient(
+                90deg,
+                #facc15,
+                #facc15 14px,
+                #dc2626 14px,
+                #dc2626 28px
+            );
+        }
+        .black-white-flag {
+            background: linear-gradient(to bottom right, #111827 50%, #f9fafb 50%);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-red-600 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-[#15151e]/95 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="flex items-center gap-3">
+                    <span class="bg-[#e10600] text-white font-f1 font-black italic text-2xl px-2.5 py-0.5 rounded-sm tracking-tighter">F1</span>
+                    <span class="font-f1 font-bold text-xl tracking-wide text-white uppercase">Paddock Hub <span class="text-red-500">2026</span></span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#pengertian" class="text-gray-300 hover:text-red-500 transition">Apa itu F1?</a>
+                    <a href="#sesi" class="text-gray-300 hover:text-red-500 transition">FP, Kualifikasi &amp; Race</a>
+                    <a href="#tim-2026" class="text-gray-300 hover:text-red-500 transition">Tim Musim 2026</a>
+                    <a href="#bendera" class="text-gray-300 hover:text-red-500 transition">Arti Bendera</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#15151e] border-b border-gray-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="#pengertian" class="block py-2 text-gray-300 hover:text-red-500">Apa itu F1?</a>
+            <a href="#sesi" class="block py-2 text-gray-300 hover:text-red-500">FP, Kualifikasi &amp; Race</a>
+            <a href="#tim-2026" class="block py-2 text-gray-300 hover:text-red-500">Tim Musim 2026</a>
+            <a href="#bendera" class="block py-2 text-gray-300 hover:text-red-500">Arti Bendera</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden bg-gradient-to-b from-[#15151e] to-[#0b0c10] border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-600/15 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-wider mb-6">
+                    <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                    Panduan Lengkap Formula One • Era Regulasi Baru 2026
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-f1 font-black uppercase tracking-tight text-white leading-none mb-6">
+                    Puncak Balap Mobil <span class="text-[#e10600]">Formula 1</span>
+                </h1>
+                <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                    Pelajari dasar-dasar ajang balap jet darat paling bergengsi di dunia, mulai dari format akhir pekan balapan, 11 konstruktor resmi musim 2026, hingga arti setiap sinyal bendera di lintasan.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#tim-2026" class="px-6 py-3 bg-[#e10600] hover:bg-red-700 text-white font-f1 font-bold uppercase tracking-wider rounded transition">
+                        Lihat 11 Tim F1 2026
+                    </a>
+                    <a href="#bendera" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-f1 font-bold uppercase tracking-wider rounded border border-gray-700 transition">
+                        Panduan Bendera F1
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="h-2 w-full f1-stripe"></div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
+
+        <!-- Section 1: Apa itu Formula 1 -->
+        <section id="pengertian" class="scroll-mt-24">
+            <div class="border-l-4 border-[#e10600] pl-4 mb-8">
+                <span class="text-red-500 font-f1 font-bold uppercase tracking-widest text-sm">01 • Pengenalan</span>
+                <h2 class="text-3xl sm:text-4xl font-f1 font-bold text-white uppercase">Apa Itu Balapan Formula 1?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                <div class="lg:col-span-2 bg-[#15151e] border border-gray-800 rounded-xl p-6 sm:p-8 space-y-4 text-gray-300 leading-relaxed">
+                    <p>
+                        <strong class="text-white">Formula 1 (F1)</strong> adalah kelas tertinggi dalam balap mobil kursi tunggal (<em>single-seater</em>) roda terbuka yang diatur oleh <strong class="text-white">Fédération Internationale de l'Automobile (FIA)</strong>. Pertama kali digelar pada tahun 1950, F1 dikenal sebagai puncak inovasi teknologi otomotif, aerodinamika, dan kecepatan di dunia.
+                    </p>
+                    <p>
+                        Kata <strong class="text-white">"Formula"</strong> mengacu pada seperangkat aturan teknis ketat yang wajib dipatuhi oleh seluruh tim peserta dalam merancang sasis, mesin (<em>power unit</em>), ban, dan perangkat keselamatan mobil mereka.
+                    </p>
+                    <p>
+                        Setiap musim terdiri dari serangkaian seri balapan yang disebut <strong class="text-white">Grand Prix (GP)</strong> di berbagai sirkuit permanen maupun sirkuit jalan raya di seluruh dunia. Di akhir musim, diberikan dua gelar juara dunia: <strong class="text-red-400">Juara Dunia Pembalap</strong> dan <strong class="text-red-400">Juara Dunia Konstruktor (Tim)</strong>.
+                    </p>
+                </div>
+
+                <div class="bg-[#15151e] border border-gray-800 rounded-xl p-6 space-y-5">
+                    <h3 class="font-f1 font-bold text-xl text-white uppercase border-b border-gray-800 pb-3">Fakta Kunci F1 2026</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-xs uppercase tracking-wider text-gray-400">Kecepatan Puncak</div>
+                            <div class="text-2xl font-f1 font-bold text-white">&gt; 350 km/jam</div>
+                        </div>
+                        <div>
+                            <div class="text-xs uppercase tracking-wider text-gray-400">Regulasi Mesin 2026</div>
+                            <div class="text-base font-semibold text-gray-200">1.6L V6 Turbo Hybrid (50% Tenaga Listrik &amp; 100% Bahan Bakar Berkelanjutan)</div>
+                        </div>
+                        <div>
+                            <div class="text-xs uppercase tracking-wider text-gray-400">Sistem Poin Utama</div>
+                            <div class="text-sm text-gray-300">P1 (25), P2 (18), P3 (15), P4 (12), P5 (10), P6 (8), P7 (6), P8 (4), P9 (2), P10 (1)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Pengertian FP, Kualifikasi, dan Race -->
+        <section id="sesi" class="scroll-mt-24">
+            <div class="border-l-4 border-[#e10600] pl-4 mb-8">
+                <span class="text-red-500 font-f1 font-bold uppercase tracking-widest text-sm">02 • Format Akhir Pekan</span>
+                <h2 class="text-3xl sm:text-4xl font-f1 font-bold text-white uppercase">Free Practice (FP), Kualifikasi &amp; Race</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card FP -->
+                <div class="bg-[#15151e] border border-gray-800 hover:border-red-500/50 rounded-xl p-6 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/30 rounded text-xs font-bold uppercase">Hari Jumat – Sabtu</span>
+                            <span class="font-f1 font-black text-2xl text-gray-600">01</span>
+                        </div>
+                        <h3 class="text-2xl font-f1 font-bold text-white uppercase mb-3">Free Practice (FP)</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                            <strong>Free Practice (Latihan Bebas)</strong> adalah sesi uji coba resmi sebelum kualifikasi dan balapan dimulai. Pada akhir pekan standar, terdapat tiga sesi yaitu <strong>FP1, FP2, dan FP3</strong> (masing-masing berdurasi 60 menit).
+                        </p>
+                        <ul class="text-sm text-gray-400 space-y-2 border-t border-gray-800 pt-4">
+                            <li>• Menguji komponen aerodinamika &amp; setelan suspensi mobil.</li>
+                            <li>• Mengukur tingkat keausan ban (<em>long run</em>).</li>
+                            <li>• Membantu pembalap menghafal titik pengereman sirkuit.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card Qualifying -->
+                <div class="bg-[#15151e] border border-gray-800 hover:border-red-500/50 rounded-xl p-6 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/30 rounded text-xs font-bold uppercase">Hari Sabtu</span>
+                            <span class="font-f1 font-black text-2xl text-gray-600">02</span>
+                        </div>
+                        <h3 class="text-2xl font-f1 font-bold text-white uppercase mb-3">Kualifikasi (Qualifying)</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                            <strong>Kualifikasi</strong> adalah sesi adu cepat mencatatkan waktu satu putaran (<em>lap</em>) tercepat untuk menentukan posisi start (<em>starting grid</em>) saat balapan utama. Dibagi menjadi 3 babak sistem gugur (untuk 22 mobil di 2026):
+                        </p>
+                        <ul class="text-sm text-gray-400 space-y-2 border-t border-gray-800 pt-4">
+                            <li>• <strong class="text-gray-200">Q1 (18 menit):</strong> Semua 22 mobil turun; 6 pembalap terlambat tereliminasi (start P17–P22).</li>
+                            <li>• <strong class="text-gray-200">Q2 (15 menit):</strong> 16 mobil tersisa; 6 pembalap terlambat tereliminasi (start P11–P16).</li>
+                            <li>• <strong class="text-gray-200">Q3 (12 menit):</strong> 10 mobil tercepat memperebutkan <strong>Pole Position</strong> (start P1).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card Race -->
+                <div class="bg-[#15151e] border border-gray-800 hover:border-red-500/50 rounded-xl p-6 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-red-500/10 text-red-400 border border-red-500/30 rounded text-xs font-bold uppercase">Hari Minggu</span>
+                            <span class="font-f1 font-black text-2xl text-gray-600">03</span>
+                        </div>
+                        <h3 class="text-2xl font-f1 font-bold text-white uppercase mb-3">Race (Balapan Utama)</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                            <strong>Race (Grand Prix)</strong> adalah puncak acara di mana seluruh pembalap beradu kecepatan secara bersamaan menempuh jarak minimal <strong>305 km</strong> (kecuali Monako ~260 km) atau batas waktu maksimal 2 jam.
+                        </p>
+                        <ul class="text-sm text-gray-400 space-y-2 border-t border-gray-800 pt-4">
+                            <li>• Setiap pembalap wajib melakukan minimal 1 kali <strong>pit stop</strong> untuk mengganti kompon ban (kondisi kering).</li>
+                            <li>• Strategi ban, manajemen energi baterai, dan kecepatan pit crew sangat menentukan kemenangan.</li>
+                            <li>• 10 pembalap terdepan yang menyentuh garis finis mendapatkan poin kejuaraan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Tim Formula 1 Season 2026 -->
+        <section id="tim-2026" class="scroll-mt-24">
+            <div class="flex flex-col md:flex-row md:items-end justify-between border-l-4 border-[#e10600] pl-4 mb-8 gap-4">
+                <div>
+                    <span class="text-red-500 font-f1 font-bold uppercase tracking-widest text-sm">03 • Konstruktor &amp; Pembalap</span>
+                    <h2 class="text-3xl sm:text-4xl font-f1 font-bold text-white uppercase">Tim Formula 1 Season 2026</h2>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input type="text" id="team-search" placeholder="Cari tim, mesin, atau pembalap..."
+                           class="bg-[#15151e] border border-gray-700 text-sm text-white rounded-lg px-4 py-2 focus:outline-none focus:border-red-500">
+                </div>
+            </div>
+
+            <p class="text-gray-400 text-sm mb-6">
+                Musim Formula 1 2026 menjadi tonggak sejarah baru dengan hadirnya <strong class="text-white">11 tim (22 mobil)</strong> di grid, menyusul masuknya pabrikan <strong class="text-white">Audi</strong> (mengambil alih Sauber) dan tim baru asal Amerika Serikat, <strong class="text-white">Cadillac Formula 1 Team</strong>.
+            </p>
+
+            <div id="teams-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Diisi dinamis lewat JavaScript -->
+            </div>
+        </section>
+
+        <!-- Section 4: Arti Semua Bendera di Formula 1 -->
+        <section id="bendera" class="scroll-mt-24">
+            <div class="border-l-4 border-[#e10600] pl-4 mb-8">
+                <span class="text-red-500 font-f1 font-bold uppercase tracking-widest text-sm">04 • Regulasi &amp; Keselamatan Lintasan</span>
+                <h2 class="text-3xl sm:text-4xl font-f1 font-bold text-white uppercase">Arti Semua Bendera di Formula 1</h2>
+            </div>
+
+            <p class="text-gray-400 text-sm mb-8 max-w-3xl">
+                Marshal di pinggir lintasan serta panel lampu digital (<em>LED light panels</em>) menggunakan kode bendera standar FIA untuk memberikan instruksi instan kepada pembalap yang melaju di atas 300 km/jam.
+            </p>
+
+            <div id="flags-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Diisi dinamis lewat JavaScript -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#15151e] border-t border-gray-800 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+            <div class="flex items-center gap-2">
+                <span class="bg-[#e10600] text-white font-f1 font-black italic px-2 py-0.5 rounded-sm">F1</span>
+                <span>Paddock Hub 2026 — Dokumentasi &amp; Edukasi Balap Formula 1</span>
+            </div>
+            <div>
+                Siap di-deploy ke <span class="text-white font-semibold">GitHub Pages</span> (Single-file HTML)
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data 11 Tim Resmi Formula 1 Musim 2026
+        const teams2026 = [
+            {
+                name: "Mercedes-AMG Petronas F1 Team",
+                shortName: "Mercedes",
+                chassis: "F1 W17",
+                powerUnit: "Mercedes-AMG F1 M17",
+                base: "Brackley, Inggris",
+                color: "#27F4D2",
+                drivers: ["#63 George Russell", "#12 Andrea Kimi Antonelli"],
+                note: "Pabrikan Jerman yang tampil dominan di awal era regulasi baru 2026."
+            },
+            {
+                name: "Scuderia Ferrari HP",
+                shortName: "Ferrari",
+                chassis: "SF-26",
+                powerUnit: "Ferrari 067/6",
+                base: "Maranello, Italia",
+                color: "#E8002D",
+                drivers: ["#16 Charles Leclerc", "#44 Lewis Hamilton"],
+                note: "Satu-satunya tim yang selalu berlaga sejak kejuaraan F1 dimulai pada 1950."
+            },
+            {
+                name: "Oracle Red Bull Racing",
+                shortName: "Red Bull Racing",
+                chassis: "RB22",
+                powerUnit: "Red Bull Ford DM01",
+                base: "Milton Keynes, Inggris",
+                color: "#3671C6",
+                drivers: ["#3 Max Verstappen", "#6 Isack Hadjar"],
+                note: "Musim debut mesin mandiri Red Bull Powertrains yang bekerja sama dengan Ford."
+            },
+            {
+                name: "McLaren Mastercard F1 Team",
+                shortName: "McLaren",
+                chassis: "MCL40",
+                powerUnit: "Mercedes-AMG F1 M17",
+                base: "Woking, Inggris",
+                color: "#FF8000",
+                drivers: ["#1 Lando Norris", "#81 Oscar Piastri"],
+                note: "Juara bertahan yang mengandalkan duet pembalap muda papan atas."
+            },
+            {
+                name: "Aston Martin Aramco F1 Team",
+                shortName: "Aston Martin",
+                chassis: "AMR26",
+                powerUnit: "Honda RA626H",
+                base: "Silverstone, Inggris",
+                color: "#229971",
+                drivers: ["#14 Fernando Alonso", "#18 Lance Stroll"],
+                note: "Memulai kemitraan pabrikan eksklusif bersama Honda dengan rancangan Adrian Newey."
+            },
+            {
+                name: "BWT Alpine F1 Team",
+                shortName: "Alpine",
+                chassis: "A526",
+                powerUnit: "Mercedes-AMG F1 M17",
+                base: "Enstone, Inggris",
+                color: "#0093CC",
+                drivers: ["#10 Pierre Gasly", "#43 Franco Colapinto"],
+                note: "Beralih menjadi tim pelanggan mesin Mercedes mulai musim 2026."
+            },
+            {
+                name: "Atlassian Williams F1 Team",
+                shortName: "Williams",
+                chassis: "FW48",
+                powerUnit: "Mercedes-AMG F1 M17",
+                base: "Grove, Inggris",
+                color: "#64C4FF",
+                drivers: ["#23 Alexander Albon", "#55 Carlos Sainz Jr."],
+                note: "Tim legendaris Inggris pemilik 9 gelar konstruktor dengan duet Albon & Sainz."
+            },
+            {
+                name: "Visa Cash App Racing Bulls F1 Team",
+                shortName: "Racing Bulls",
+                chassis: "VCARB 03",
+                powerUnit: "Red Bull Ford DM01",
+                base: "Faenza, Italia",
+                color: "#6692FF",
+                drivers: ["#30 Liam Lawson", "#41 Arvid Lindblad"],
+                note: "Tim saudara Red Bull yang menurunkan talenta muda Liam Lawson & rookie Arvid Lindblad."
+            },
+            {
+                name: "TGR Haas F1 Team",
+                shortName: "Haas F1 Team",
+                chassis: "VF-26",
+                powerUnit: "Ferrari 067/6",
+                base: "Kannapolis, AS",
+                color: "#B6BABD",
+                drivers: ["#31 Esteban Ocon", "#87 Oliver Bearman"],
+                note: "Memperkuat aliansi teknis bersama Toyota Gazoo Racing (TGR) dan Ferrari."
+            },
+            {
+                name: "Audi Revolut F1 Team",
+                shortName: "Audi",
+                chassis: "R26",
+                powerUnit: "Audi AFR 26 Hybrid",
+                base: "Hinwil, Swiss & Neuburg, Jerman",
+                color: "#F50537",
+                drivers: ["#27 Nico Hülkenberg", "#5 Gabriel Bortoleto"],
+                note: "Debut resmi pabrikan Jerman Audi sebagai tim konstruktor penuh setelah mengakuisisi Sauber."
+            },
+            {
+                name: "Cadillac Formula 1 Team",
+                shortName: "Cadillac",
+                chassis: "MAC-26",
+                powerUnit: "Ferrari 067/6",
+                base: "Fishers, AS & Silverstone, Inggris",
+                color: "#D4AF37",
+                drivers: ["#11 Sergio Pérez", "#77 Valtteri Bottas"],
+                note: "Tim ke-11 baru di grid F1 2026 di bawah naungan General Motors dengan dua pembalap senior."
+            }
+        ];
+
+        // Data Lengkap Bendera Formula 1
+        const f1Flags = [
+            {
+                name: "Bendera Hijau (Green Flag)",
+                visualClass: "bg-emerald-500",
+                badge: "Lintasan Aman",
+                meaning: "Menandakan lintasan sepenuhnya aman dan bersih dari rintangan. Dikibarkan saat awal sesi latihan/kualifikasi, awal formation lap, atau tepat setelah zona bahaya bendera kuning berakhir sehingga pembalap boleh kembali memacu kecepatan penuh dan menyalip."
+            },
+            {
+                name: "Bendera Kuning (Yellow Flag)",
+                visualClass: "bg-yellow-400",
+                badge: "Bahaya • Dilarang Menyalip",
+                meaning: "<strong>Single Yellow (1 bendera):</strong> Ada bahaya di pinggir lintasan; kurangi kecepatan, dilarang menyalip, dan bersiap mengubah arah.<br><strong>Double Yellow (2 bendera):</strong> Bahaya besar menghalangi lintasan atau ada marshal bertugas; wajib melambat drastis, bersiap berhenti, dan batalkan catatan lap saat kualifikasi."
+            },
+            {
+                name: "Bendera Merah (Red Flag)",
+                visualClass: "bg-red-600",
+                badge: "Sesi Dihentikan",
+                meaning: "Menandakan sesi latihan, kualifikasi, atau balapan dihentikan segera karena kecelakaan parah, lintasan terblokir total, atau cuaca ekstrem. Semua pembalap wajib melambat dan langsung kembali ke pit lane."
+            },
+            {
+                name: "Bendera Biru (Blue Flag)",
+                visualClass: "bg-blue-600",
+                badge: "Beri Jalan Mobil Cepat",
+                meaning: "Saat balapan, dikibarkan kepada pembalap yang tertinggal satu putaran (<em>backmarker</em>) agar segera memberi jalan kepada pembalap terdepan yang akan melakukan <em>overlap</em>. Mengabaikan 3 kali bendera biru beruntun berbuah penalti. Saat keluar pit, menandakan ada mobil mendekat di lintasan utama."
+            },
+            {
+                name: "Bendera Kuning-Merah Bergaris",
+                visualClass: "yellow-red-flag",
+                badge: "Lintasan Licin",
+                meaning: "Bendera diam (tidak dikibarkan) dengan garis vertikal kuning dan merah. Memperingatkan pembalap bahwa daya cengkeram (<em>grip</em>) aspal di depan menurun drastis akibat tumpahan oli, cairan pendingin, kerikil, atau genangan air hujan."
+            },
+            {
+                name: "Bendera Putih (White Flag)",
+                visualClass: "bg-white border border-gray-400",
+                badge: "Kendaraan Lambat di Depan",
+                meaning: "Memperingatkan pembalap bahwa terdapat kendaraan yang melaju jauh lebih lambat di sektor lintasan depan, seperti mobil F1 yang mengalami kerusakan teknis, ambulans, atau truk evakuasi."
+            },
+            {
+                name: "Bendera Hitam-Putih Diagonal",
+                visualClass: "black-white-flag border border-gray-500",
+                badge: "Peringatan Terakhir",
+                meaning: "Berfungsi layaknya 'kartu kuning' dalam sepak bola. Ditampilkan bersama nomor mobil pembalap sebagai peringatan terakhir atas perilaku tidak sportif atau manuver berbahaya (seperti memotong batas lintasan berulang kali atau memaksa lawan keluar trek)."
+            },
+            {
+                name: "Bendera Hitam Lingkaran Oranye",
+                visualClass: "bg-zinc-950 border border-gray-700 flex items-center justify-center",
+                innerHtml: '<span class="w-6 h-6 rounded-full bg-orange-500"></span>',
+                badge: "Kerusakan Teknis Berbahaya",
+                meaning: "Dikenal juga sebagai <em>'Meatball Flag'</em>. Ditampilkan bersama nomor mobil untuk memberi tahu pembalap bahwa mobilnya mengalami kerusakan mekanis berbahaya (misal sayap lepas atau kebocoran) dan wajib segera masuk pit untuk diperbaiki."
+            },
+            {
+                name: "Bendera Hitam (Black Flag)",
+                visualClass: "bg-zinc-950 border border-gray-700",
+                badge: "Diskualifikasi",
+                meaning: "Hukuman paling berat di lintasan. Ditampilkan bersama nomor mobil untuk memberi tahu bahwa pembalap tersebut resmi didiskualifikasi dari balapan dan wajib segera kembali ke garasi pit tanpa melanjutkan lomba."
+            },
+            {
+                name: "Bendera Kotak-Kotak (Chequered Flag)",
+                visualClass: "checkered-flag border border-gray-500",
+                badge: "Sesi / Balapan Selesai",
+                meaning: "Bendera paling ikonik di dunia balap yang dikibarkan di atas garis finis untuk menandakan bahwa sesi latihan, kualifikasi, atau balapan utama telah resmi berakhir."
+            }
+        ];
+
+        // Render Tim 2026
+        const teamsGrid = document.getElementById('teams-grid');
+        const searchInput = document.getElementById('team-search');
+
+        function renderTeams(filterText = '') {
+            const keyword = filterText.toLowerCase().trim();
+            const filtered = teams2026.filter(team =>
+                team.name.toLowerCase().includes(keyword) ||
+                team.shortName.toLowerCase().includes(keyword) ||
+                team.powerUnit.toLowerCase().includes(keyword) ||
+                team.drivers.some(d => d.toLowerCase().includes(keyword))
+            );
+
+            if (filtered.length === 0) {
+                teamsGrid.innerHTML = `<div class="col-span-full text-center py-10 text-gray-400 bg-[#15151e] rounded-xl border border-gray-800">Tidak ada tim atau pembalap yang cocok dengan pencarian "${filterText}".</div>`;
+                return;
+            }
+
+            teamsGrid.innerHTML = filtered.map(team => `
+                <article class="bg-[#15151e] border border-gray-800 hover:border-gray-600 rounded-xl overflow-hidden transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-2 w-full" style="background-color: ${team.color};"></div>
+                        <div class="p-6">
+                            <div class="flex items-start justify-between gap-2 mb-2">
+                                <h3 class="font-f1 font-bold text-xl text-white leading-snug">${team.name}</h3>
+                                <span class="text-xs font-mono px-2 py-0.5 rounded bg-gray-800 text-gray-300 border border-gray-700 shrink-0">${team.chassis}</span>
+                            </div>
+                            <p class="text-xs text-gray-400 mb-4">${team.base} • Mesin: <span class="text-gray-200 font-medium">${team.powerUnit}</span></p>
+                            
+                            <div class="space-y-2 mb-4">
+                                <div class="text-[11px] uppercase tracking-wider text-gray-500 font-semibold">Pembalap Utama 2026</div>
+                                <div class="grid grid-cols-1 gap-1.5">
+                                    ${team.drivers.map(driver => `
+                                        <div class="bg-[#0b0c10] border border-gray-800/80 px-3 py-2 rounded-lg text-sm font-medium text-gray-200 flex items-center gap-2">
+                                            <span class="w-1.5 h-4 rounded-full" style="background-color: ${team.color};"></span>
+                                            ${driver}
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 py-3 bg-[#0b0c10]/60 border-t border-gray-800/80 text-xs text-gray-400">
+                        ${team.note}
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        // Render Bendera F1
+        const flagsGrid = document.getElementById('flags-grid');
+        flagsGrid.innerHTML = f1Flags.map(flag => `
+            <article class="bg-[#15151e] border border-gray-800 rounded-xl p-6 flex flex-col gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-11 rounded shadow-md shrink-0 ${flag.visualClass}">
+                        ${flag.innerHtml || ''}
+                    </div>
+                    <div>
+                        <span class="inline-block text-[11px] font-semibold uppercase tracking-wider text-red-400 mb-0.5">${flag.badge}</span>
+                        <h3 class="font-f1 font-bold text-lg text-white leading-tight">${flag.name}</h3>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-300 leading-relaxed">${flag.meaning}</p>
+            </article>
+        `).join('');
+
+        // Event Listeners
+        renderTeams();
+        searchInput.addEventListener('input', (e) => renderTeams(e.target.value));
+
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
